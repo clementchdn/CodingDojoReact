@@ -1,6 +1,10 @@
 import RevealWrapper from "./components/RevealWrapper";
 
-import { Slide1, Slide2, Slide3 } from "./components/Slides";
+import {
+  FirstComponentSlide,
+  UseStateSlide,
+  UseEffectSlide,
+} from "./components/Slides";
 
 const App = () => {
   return (
@@ -10,13 +14,14 @@ const App = () => {
         <p>
           Ce coding dojo présenté sous la forme de slides a pour objectif
           d'apprendre les bases de React. Il vous faudra modifier le code des
-          slides "Challenge" pour avancer dans le cours. Une solution sera
-          proposé dans la slide suivante.
+          slides "Challenge" pour avancer dans le cours. Pour passer à la slide
+          suivante ou revenir à la précédente, vous pouvez utiliser les flèches
+          de votre clavier.
         </p>
       </section>
-      <Slide1 />
-      <Slide2 />
-      <Slide3 />
+      <FirstComponentSlide />
+      <UseStateSlide />
+      <UseEffectSlide />
     </RevealWrapper>
   );
 };

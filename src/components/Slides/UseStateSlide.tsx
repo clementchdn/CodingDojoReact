@@ -10,12 +10,12 @@ export default function Slide2() {
   return (
     <section>
       <section>
-        <ChallengeWrapper componentPath={path} type="Challenge">
+        <ChallengeWrapper componentPath={path} type="Challenge" challNumber={2}>
           <Counter />
         </ChallengeWrapper>
       </section>
       <section>
-        <ChallengeWrapper componentPath={path} type="Solution">
+        <ChallengeWrapper componentPath={path} type="Solution" challNumber={2}>
           <CounterSolution />
         </ChallengeWrapper>
       </section>

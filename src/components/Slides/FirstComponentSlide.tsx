@@ -14,12 +14,20 @@ export default function Slide1() {
   return (
     <section>
       <section>
-        <ChallengeWrapper componentPath={myFirstComponentPath} type="Challenge">
+        <ChallengeWrapper
+          componentPath={myFirstComponentPath}
+          type="Challenge"
+          challNumber={1}
+        >
           <MyFirstComponent />
         </ChallengeWrapper>
       </section>
       <section>
-        <ChallengeWrapper componentPath={myFirstComponentPath} type="Solution">
+        <ChallengeWrapper
+          componentPath={myFirstComponentPath}
+          type="Solution"
+          challNumber={1}
+        >
           <MyFirstComponentSolution />
         </ChallengeWrapper>
       </section>

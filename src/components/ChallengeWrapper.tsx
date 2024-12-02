@@ -1,23 +1,24 @@
 import { ReactElement } from "react";
-import Reveal from "reveal.js";
+
+type ChallengeWrapperProps = {
+  children: ReactElement;
+  componentPath: string;
+  type: "Challenge" | "Solution";
+  challNumber?: number;
+};
 
 export default function ChallengeWrapper({
   children,
   componentPath,
   type,
-}: {
-  children: ReactElement;
-  componentPath: string;
-  type: "Challenge" | "Solution";
-}) {
+  challNumber,
+}: ChallengeWrapperProps) {
   const formattedPath =
     type === "Challenge"
       ? componentPath
       : componentPath.slice(1, componentPath.length - 4) +
         type +
         componentPath.slice(componentPath.length - 4);
-
-  const indices = Reveal.getIndices();
 
   return (
     <div
@@ -29,7 +30,7 @@ export default function ChallengeWrapper({
       }}
     >
       <h2 style={{ textAlign: "left" }}>
-        {type} {indices.h}
+        {type} {challNumber}
       </h2>
       <h3 style={{ textAlign: "left" }}>
         {/* remove first "/" character in the path */}
