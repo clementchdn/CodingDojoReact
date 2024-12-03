@@ -10,9 +10,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -21,6 +23,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -38,4 +41,26 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.lesson-slide {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-column-gap: 2%;
+  grid-template-rows: 100%;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  > div:nth-of-type(2) {
+    height: 100%;
+    text-align: left;
+  }
+}
+
+.shiki {
+  margin: 0 !important;
+  code {
+    max-height: unset !important;
+  }
 }

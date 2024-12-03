@@ -1,5 +1,11 @@
 import FirstComponentSlide from "./FirstComponentSlide";
 import UseStateSlide from "./UseStateSlide";
 import UseEffectSlide from "./UseEffectSlide";
+import IntroductionSlide from "./IntroductionSlide";
 
-export { FirstComponentSlide, UseStateSlide, UseEffectSlide };
+export {
+  IntroductionSlide,
+  FirstComponentSlide,
+  UseStateSlide,
+  UseEffectSlide,
+};

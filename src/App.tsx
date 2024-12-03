@@ -4,6 +4,7 @@ import {
   FirstComponentSlide,
   UseStateSlide,
   UseEffectSlide,
+  IntroductionSlide,
 } from "./components/Slides";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           de votre clavier.
         </p>
       </section>
+      <IntroductionSlide />
       <FirstComponentSlide />
       <UseStateSlide />
       <UseEffectSlide />

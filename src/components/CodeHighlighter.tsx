@@ -22,7 +22,7 @@ export default function CodeHighlighter(props: { code: string }) {
   }
 
   return (
-    <div style={{ position: "relative", width: "100%", height: "100%" }}>
+    <div style={{ position: "relative" }}>
       <div
         dangerouslySetInnerHTML={{ __html: output }}
         style={{ position: "relative", width: "100%", height: "100%" }}
