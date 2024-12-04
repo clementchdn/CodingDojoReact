@@ -2,6 +2,7 @@ import RevealWrapper from "./components/RevealWrapper";
 
 import {
   FirstComponentSlide,
+  TimerSlide,
   UseStateSlide,
   UseEffectSlide,
   IntroductionSlide,
@@ -26,6 +27,7 @@ const App = () => {
       <FirstComponentSlide />
       <UseStateSlide />
       <UseEffectSlide />
+      <TimerSlide />
     </RevealWrapper>
   );
 };

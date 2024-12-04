@@ -20,6 +20,7 @@ const RevealWrapper: React.FC<RevealWrapperProps> = ({ children }) => {
       hash: true,
       margin: 0.04,
       center: false,
+      history: true,
       highlight: {
         beforeHighlight: async (hljs) => await hljs.registerLanguage("tsx"),
       },
