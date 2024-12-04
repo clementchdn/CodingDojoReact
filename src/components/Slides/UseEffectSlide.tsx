@@ -9,13 +9,13 @@ export default function Slide3() {
   return (
     <section>
       <section>
-        <ChallengeWrapper componentPath={path} type="Challenge" challNumber={3}>
-          <Holidays />
+        <ChallengeWrapper componentPath={path} type="Solution" challNumber={3}>
+          <HolidaysSolution />
         </ChallengeWrapper>
       </section>
       <section>
-        <ChallengeWrapper componentPath={path} type="Solution" challNumber={3}>
-          <HolidaysSolution />
+        <ChallengeWrapper componentPath={path} type="Challenge" challNumber={3}>
+          <Holidays />
         </ChallengeWrapper>
       </section>
       <section>

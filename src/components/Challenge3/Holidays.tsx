@@ -29,21 +29,27 @@ export default function HolidaysList() {
 
   return (
     <div
-      style={{ position: "relative", maxHeight: "100%", overflow: "hidden" }}
+      style={{
+        height: "100%",
+        display: "grid",
+        textAlign: "left",
+        gridTemplateRows: "min-content 1fr",
+      }}
     >
-      <p>
-        In this challenge, you must leverage the <i>useEffect</i> hook to
-        display the fetched data in a list.
-      </p>
-
-      <div className="select-wrapper">
-        <select
-          name="year"
-          id="year-select"
-          onChange={(v) => setSelectedYear(parseInt(v.target.value, 10))}
-        >
-          {options}
-        </select>
+      <div style={{ display: "inline-flex", position: "relative" }}>
+        <span>
+          In this challenge, you must leverage the <i>useEffect</i> hook to
+          display the fetched data in a list.
+        </span>
+        <div className="select-wrapper">
+          <select
+            name="year"
+            id="year-select"
+            onChange={(v) => setSelectedYear(parseInt(v.target.value, 10))}
+          >
+            {options}
+          </select>
+        </div>
       </div>
 
       <ul style={{ position: "relative", overflowY: "auto" }}>
