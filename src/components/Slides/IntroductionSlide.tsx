@@ -7,7 +7,15 @@ export default function IntroductionSlide() {
   return (
     <section>
       <div className="lesson-slide">
-        <CodeHighlighter code={IntroductionComponentRaw} />
+        <div
+          style={{
+            display: "flex",
+            position: "relative",
+            alignItems: "center",
+          }}
+        >
+          <CodeHighlighter code={IntroductionComponentRaw} />
+        </div>
         <div>
           <IntroductionComponent />
         </div>

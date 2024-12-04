@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 type ChallengeWrapperProps = {
   children: ReactElement;
   componentPath: string;
-  type: "Challenge" | "Solution";
+  type: "Challenge" | "Code" | "Solution";
   challNumber?: number;
 };
 
@@ -17,7 +17,7 @@ export default function ChallengeWrapper({
     type === "Challenge"
       ? componentPath
       : componentPath.slice(1, componentPath.length - 4) +
-        type +
+        "Solution" +
         componentPath.slice(componentPath.length - 4);
 
   return (
@@ -29,18 +29,16 @@ export default function ChallengeWrapper({
         gridTemplateRows: "min-content min-content 1fr",
       }}
     >
-      <h2 style={{ textAlign: "left" }}>
-        {type} {challNumber}
-      </h2>
+      <h2 style={{ textAlign: "left" }}>Challenge {challNumber}</h2>
       <h3 style={{ textAlign: "left" }}>
         {/* remove first "/" character in the path */}
         Component: {formattedPath}
       </h3>
       <div
         style={{
-          display: "grid",
-          justifyContent: "center",
-          alignItems: "center",
+          position: "relative",
+          height: "100%",
+          overflow: "hidden",
         }}
       >
         {children}

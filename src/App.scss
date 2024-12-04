@@ -1,6 +1,5 @@
 #root {
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -35,6 +34,11 @@
   }
 }
 
+section {
+  position: relative;
+  overflow: hidden;
+}
+
 .card {
   padding: 2em;
 }
@@ -52,7 +56,8 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  > div:nth-of-type(2) {
+
+  >div:nth-of-type(2) {
     height: 100%;
     text-align: left;
   }
@@ -60,7 +65,85 @@
 
 .shiki {
   margin: 0 !important;
+  width: 100% !important;
+  height: fit-content;
+  max-height: 100%;
+  overflow: auto;
+
   code {
-    max-height: unset !important;
+    max-height: 100% !important;
+  }
+}
+
+button {
+  border: none;
+  /* padding: 12px 40px; */
+  padding: 6px 20px;
+  background-color: rgba(155, 155, 155, 0.2);
+  color: inherit;
+  border-radius: 6px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  outline: none !important;
+  transition: 0.2s all;
+
+  &:active {
+    border: none !important;
+    outline: none !important;
+    transform: scale(0.92);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  }
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 10px red;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #fff;
+  background-color: var(--darkgray);
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select wrapper */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  flex-grow: 0;
+  width: fit-content;
+  border-radius: .25em;
+  overflow: hidden;
+  font-size: 1em;
+
+  /* Arrow */
+  &::after {
+    content: '\25BC';
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 0.25em;
+    font-size: 0.5em;
+    background-color: #34495e;
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+
+  /* Transition */
+  &:hover::after {
+    color: #f39c12;
+  }
+
+  option {
+    background-color: transparent;
   }
 }

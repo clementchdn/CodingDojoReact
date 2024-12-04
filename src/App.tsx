@@ -12,12 +12,14 @@ const App = () => {
     <RevealWrapper>
       <section>
         <h2>Coding dojo React 1</h2>
-        <p>
-          Ce coding dojo présenté sous la forme de slides a pour objectif
-          d'apprendre les bases de React. Il vous faudra modifier le code des
-          slides "Challenge" pour avancer dans le cours. Pour passer à la slide
-          suivante ou revenir à la précédente, vous pouvez utiliser les flèches
-          de votre clavier.
+        <p style={{ textAlign: "left", padding: "1em" }}>
+          This coding dojo presented as a slideshow aims to provide a basic
+          understanding of React. Use the arrow keys of your keyboard to move
+          around slides. Some slides will be marked as "Challenge". They show
+          the final result of the challenge. To practice on a challenge, go to
+          the slide below (down arrow) and open the file at the path displayed
+          on the slide. Update the component's code until it matches the first
+          slide. An example solution is available on the slide below.
         </p>
       </section>
       <IntroductionSlide />

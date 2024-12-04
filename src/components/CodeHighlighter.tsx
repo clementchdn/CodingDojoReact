@@ -22,23 +22,30 @@ export default function CodeHighlighter(props: { code: string }) {
   }
 
   return (
-    <div style={{ position: "relative" }}>
+    <>
       <div
         dangerouslySetInnerHTML={{ __html: output }}
-        style={{ position: "relative", width: "100%", height: "100%" }}
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+        }}
       />
       <div
         style={{
           position: "absolute",
-          top: 0,
-          right: 114,
+          top: "0px",
+          right: "20px",
           textAlign: "right",
           cursor: "pointer",
         }}
         onClick={copyContent}
       >
-        <FontAwesomeIcon icon={faCopy} />
+        <button style={{ padding: 0, background: "none" }}>
+          <FontAwesomeIcon icon={faCopy} />
+        </button>
       </div>
-    </div>
+    </>
   );
 }

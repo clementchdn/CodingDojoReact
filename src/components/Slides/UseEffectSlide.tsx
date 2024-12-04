@@ -19,7 +19,9 @@ export default function Slide3() {
         </ChallengeWrapper>
       </section>
       <section>
-        <CodeHighlighter code={HolidaysSolutionRaw} />
+        <ChallengeWrapper componentPath={path} type="Code" challNumber={3}>
+          <CodeHighlighter code={HolidaysSolutionRaw} />
+        </ChallengeWrapper>
       </section>
     </section>
   );
