@@ -1,5 +1,6 @@
 import React, { useEffect, ReactNode } from "react";
 import Reveal from "reveal.js";
+import RevealSearch from "reveal.js/plugin/search/search";
 import "reveal.js/dist/reveal.css"; // Core CSS
 import "reveal.js/dist/theme/moon.css"; // Theme CSS
 
@@ -19,6 +20,10 @@ const RevealWrapper: React.FC<RevealWrapperProps> = ({ children }) => {
       hash: true,
       margin: 0.04,
       center: false,
+      highlight: {
+        beforeHighlight: async (hljs) => await hljs.registerLanguage("tsx"),
+      },
+      plugins: [RevealSearch],
     });
   }, []);
 
