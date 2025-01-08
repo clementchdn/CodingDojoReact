@@ -4,18 +4,13 @@ export default function Timer() {
   const [timeSpentOnSlide, setTimeSpentOnslide] = useState<number>(0);
 
   const [isVisible, setIsVisible] = useState(false);
-  const elementRef = useRef(null);
+  const elementRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update visibility state based on intersection status
-        setIsVisible(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1, // Trigger when at least 10% of the element is visible
-      },
-    );
+    const observer = new IntersectionObserver(([entry]) => {
+      // Update visibility state based on intersection status
+      setIsVisible(entry.isIntersecting);
+    });
 
     if (elementRef.current) {
       observer.observe(elementRef.current);
