@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { LanguageContext } from "../LanguageProvider";
 
 async function fetchHolidays(year: number): Promise<Record<string, string>> {
   return (
@@ -13,6 +14,7 @@ export default function HolidaysList() {
   // API does not provide data for years > 2028
   const lastSupportedYear = 2028;
   const [holidays, setHolidays] = useState<Record<string, string>>({});
+  const { getText } = useContext(LanguageContext);
 
   fetchHolidays(startYear).then((result) => setHolidays(result));
 
@@ -36,21 +38,21 @@ export default function HolidaysList() {
         gridTemplateRows: "min-content 1fr",
       }}
     >
-      <div style={{ display: "inline-flex", position: "relative" }}>
-        <span>
-          In this challenge, you must leverage the <i>useEffect</i> hook to
-          display the fetched data in a list.
-        </span>
-        <div className="select-wrapper">
-          <select
-            name="year"
-            id="year-select"
-            onChange={(v) => setSelectedYear(parseInt(v.target.value, 10))}
-          >
-            {options}
-          </select>
+      <p>
+        {getText("Challenge3Description1")} <i>useEffect</i>
+        {getText("Challenge3Description2")}
+        <div style={{ display: "inline-flex", position: "relative" }}>
+          <div className="select-wrapper">
+            <select
+              name="year"
+              id="year-select"
+              onChange={(v) => setSelectedYear(parseInt(v.target.value, 10))}
+            >
+              {options}
+            </select>
+          </div>
         </div>
-      </div>
+      </p>
 
       <ul style={{ position: "relative", overflowY: "auto" }}>
         {Object.entries(holidays).map(([key, value]) => (

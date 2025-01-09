@@ -1,13 +1,10 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { LanguageContext } from "../LanguageProvider";
+import { useEffect, useRef, useState } from "react";
 
-export default function Timer() {
+export default function ThemedSlideSolution() {
   const [timeSpentOnSlide, setTimeSpentOnslide] = useState<number>(0);
 
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLSpanElement>(null);
-
-  const { getText } = useContext(LanguageContext);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
@@ -43,13 +40,8 @@ export default function Timer() {
 
   return (
     <div>
-      <p>
-        {getText("Challenge4Description1")}
-        <i>useEffect</i> {getText("Challenge4Description2")}
-      </p>
       <span ref={elementRef}>
-        {getText("Challenge4Description3")} {timeSpentOnSlide}&nbsp;
-        {getText("seconds")}
+        Watching this slide since: {timeSpentOnSlide} seconds
       </span>
     </div>
   );

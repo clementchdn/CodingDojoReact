@@ -1,9 +1,16 @@
+import { useContext } from "react";
+import { LanguageContext } from "../LanguageProvider";
+
 export default function MyFirstComponent() {
-  const firstname = "me";
+  const { getText } = useContext(LanguageContext);
   return (
-    <p>
-      This is an exemple of React component. Now create a new function component
-      named Greetings which takes a string and displays it in a header tag.
-    </p>
+    <div>
+      <p>{getText("Challenge1Description")}</p>
+      <Hello />
+    </div>
   );
+}
+
+function Hello() {
+  return <h3> Clément </h3>;
 }
