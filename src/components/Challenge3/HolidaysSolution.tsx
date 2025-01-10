@@ -44,7 +44,7 @@ export default function HolidaysList() {
         gridTemplateRows: "min-content 1fr",
       }}
     >
-      <p>
+      <span>
         {getText("Challenge3Description1")} <i>useEffect</i>
         {getText("Challenge3Description2")}
         <div style={{ display: "inline-flex", position: "relative" }}>
@@ -58,9 +58,9 @@ export default function HolidaysList() {
             </select>
           </div>
         </div>
-      </p>
+      </span>
 
-      <ul style={{ position: "relative", overflowY: "auto" }}>
+      <ul style={{ position: "relative", marginTop: "1em", overflowY: "auto" }}>
         {Object.entries(holidays).map(([key, value]) => (
           <li key={key}>
             {key}: {value}
