@@ -83,8 +83,6 @@ function SlideContent() {
 }
 
 function LeftColumnText() {
-  const { getText } = useContext(LanguageContext);
-
   return (
     <span
       style={{

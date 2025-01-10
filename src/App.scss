@@ -1,4 +1,4 @@
-@use './themes.scss' as themes; 
+@use './components/Challenge5/themes.scss' as themes; 
 
 #root {
   margin: 0 auto;
@@ -87,7 +87,7 @@ button {
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
   outline: none !important;
-  transition: 0.2s all;
+  transition: 0.5s transform, 0.5s box-shadow;
 
   &:active {
     border: none !important;
@@ -147,14 +147,6 @@ button {
   &:hover::after {
     color: #f39c12;
   }
-}
-
-.theme-light {
-  @include themes.theme(themes.$light-theme);
-}
-
-.theme-dark {
-  @include themes.theme(themes.$dark-theme);
 }
 
 .div-wrapper {

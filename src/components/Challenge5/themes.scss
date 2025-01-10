@@ -16,4 +16,13 @@ $dark-theme: (
   background-color: map.get($theme, background);
   color: map.get($theme, color);
   border: 1px solid map.get($theme, border-color);
+  transition: all 0.5s ease;
+}
+
+.theme-light {
+  @include theme($light-theme);
+}
+
+.theme-dark {
+  @include theme($dark-theme);
 }

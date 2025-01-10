@@ -16,6 +16,9 @@ export const french: TDict = {
   Challenge4Description2:
     " pour afficher le nombre de secondes passées sur cette slide. Le compteur doit être réinitialisé à 0 à la sortie de la slide. Testez en revenant à la slide précédente puis en revenant sur celle-ci.",
   Challenge4Description3: "Vous regardez cette slide depuis : ",
+  Challenge5Description1: "Utilisez le hook ",
+  Challenge5Description2:
+    " useEffect pour permettre à l'utilisateur de changer entre les themes 'light' et 'dark' du fichier 'themes.scss'.",
   Challenge5Button: "Changer de theme",
   here: "ici",
   count: "Compte ",
