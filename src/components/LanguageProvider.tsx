@@ -34,7 +34,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const getText = (key: string) => translations[language][key] ?? key;
 
   const options = Object.keys(translations).map((lang) => (
-    <option value={lang} key={lang}>
+    <option value={lang} key={lang} selected={lang == language}>
       {getFlagEmoji(lang)}
     </option>
   ));

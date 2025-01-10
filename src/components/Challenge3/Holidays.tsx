@@ -59,7 +59,9 @@ export default function HolidaysList() {
         </div>
       </span>
 
-      <ul style={{ position: "relative", marginTop: "1em", overflowY: "auto" }}>
+      <ul
+        style={{ position: "relative", marginTop: "1rem", overflowY: "auto" }}
+      >
         {Object.entries(holidays).map(([key, value]) => (
           <li key={key}>
             {key}: {value}

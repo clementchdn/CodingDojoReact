@@ -27,16 +27,16 @@ const WelcomeSlide = () => {
 
 const App = () => {
   return (
-    <RevealWrapper>
-      <LanguageProvider>
+    <LanguageProvider>
+      <RevealWrapper>
         <WelcomeSlide />
         <IntroductionSlide />
         <FirstComponentSlide />
         <UseStateSlide />
         <UseEffectSlide />
         <TimerSlide />
-      </LanguageProvider>
-    </RevealWrapper>
+      </RevealWrapper>
+    </LanguageProvider>
   );
 };
 
