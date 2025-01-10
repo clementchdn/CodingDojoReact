@@ -51,6 +51,7 @@ export default function HolidaysList() {
             <select
               name="year"
               id="year-select"
+              defaultValue={startYear}
               onChange={(v) => setSelectedYear(parseInt(v.target.value, 10))}
             >
               {options}

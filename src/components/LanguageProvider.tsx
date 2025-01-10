@@ -34,7 +34,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const getText = (key: string) => translations[language][key] ?? key;
 
   const options = Object.keys(translations).map((lang) => (
-    <option value={lang} key={lang} selected={lang == language}>
+    <option value={lang} key={lang}>
       {getFlagEmoji(lang)}
     </option>
   ));
@@ -55,6 +55,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
             name="lang"
             id="lang-select"
             style={{ color: "white" }}
+            defaultValue={"fr"}
             onChange={(e) => setLanguage(e.target.value as TAvailableLanguages)}
           >
             {options}

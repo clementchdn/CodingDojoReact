@@ -3,6 +3,7 @@ import UseStateSlide from "./UseStateSlide";
 import UseEffectSlide from "./UseEffectSlide";
 import IntroductionSlide from "./IntroductionSlide";
 import TimerSlide from "./TimerSlide";
+import UseContextSlide from "./UseContextSlide";
 
 export {
   IntroductionSlide,
@@ -10,4 +11,5 @@ export {
   FirstComponentSlide,
   UseStateSlide,
   UseEffectSlide,
+  UseContextSlide,
 };

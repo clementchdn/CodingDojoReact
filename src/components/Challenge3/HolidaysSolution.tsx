@@ -30,7 +30,7 @@ export default function HolidaysList() {
     { length: lastSupportedYear - startYear + 1 },
     (_, index) => index + startYear,
   ).map((year) => (
-    <option value={year} key={year} selected={year == selectedYear}>
+    <option value={year} key={year}>
       {year}
     </option>
   ));
@@ -52,6 +52,7 @@ export default function HolidaysList() {
             <select
               name="year"
               id="year-select"
+              defaultValue={startYear}
               onChange={(v) => setSelectedYear(parseInt(v.target.value, 10))}
             >
               {options}

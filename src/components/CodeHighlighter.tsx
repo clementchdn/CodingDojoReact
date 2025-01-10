@@ -42,7 +42,7 @@ export default function CodeHighlighter(props: { code: string }) {
         }}
         onClick={copyContent}
       >
-        <button style={{ padding: 0, background: "none" }}>
+        <button style={{ padding: 0, background: "none", margin: 0 }}>
           <FontAwesomeIcon icon={faCopy} />
         </button>
       </div>

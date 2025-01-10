@@ -15,6 +15,10 @@ export const english: TDict = {
   Challenge4Description2:
     " hook to display the number of seconds spent on this slide. The counter must reset to 0 when leaving the slide. Test it by going to the previous slide and back here.",
   Challenge4Description3: "Watching this slide since: ",
+  Challenge5Description1: "Use the ",
+  Challenge5Description2:
+    " hook to allow users to switch between two themes, updating the colors of this slide",
+  Challenge5Button: "toggle dark theme",
 };
 
 export default english;

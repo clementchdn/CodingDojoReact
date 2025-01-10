@@ -11,6 +11,7 @@ import {
   UseStateSlide,
   UseEffectSlide,
   IntroductionSlide,
+  UseContextSlide,
 } from "./components/Slides";
 
 const WelcomeSlide = () => {
@@ -35,6 +36,7 @@ const App = () => {
         <UseStateSlide />
         <UseEffectSlide />
         <TimerSlide />
+        <UseContextSlide />
       </RevealWrapper>
     </LanguageProvider>
   );
